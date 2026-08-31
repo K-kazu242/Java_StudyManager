@@ -1,11 +1,9 @@
 package model;
 
-import java.time.LocalDate;
-
 public class SutudyModel {
 	private int id;
 	private String title;
-	private LocalDate day;
+	private String day;
 	private String content;
 	private int time;
 	private int level;
@@ -27,11 +25,11 @@ public class SutudyModel {
 		this.title = title;
 	}
 
-	public LocalDate getDay() {
+	public String getDay() {
 		return day;
 	}
 
-	public void setDay(LocalDate day) {
+	public void setDay(String day) {
 		this.day = day;
 	}
 
@@ -70,7 +68,7 @@ public class SutudyModel {
 	public SutudyModel() {
 	}
 
-	public SutudyModel(int id, String title, LocalDate day, String content, int time, int level, boolean status) {
+	public SutudyModel(int id, String title, String day, String content, int time, int level, boolean status) {
 		this.id = id;
 		this.title = title;
 		this.day = day;
