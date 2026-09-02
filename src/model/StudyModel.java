@@ -1,6 +1,6 @@
 package model;
 
-public class SutudyModel {
+public class StudyModel {
 	private int id;
 	private String title;
 	private String day;
@@ -65,10 +65,10 @@ public class SutudyModel {
 		this.status = status;
 	}
 
-	public SutudyModel() {
+	public StudyModel() {
 	}
 
-	public SutudyModel(int id, String title, String day, String content, int time, int level, boolean status) {
+	public StudyModel(int id, String title, String day, String content, int time, int level, boolean status) {
 		this.id = id;
 		this.title = title;
 		this.day = day;
