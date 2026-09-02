@@ -78,4 +78,33 @@ public class StudyModel {
 		this.status = status;
 	}
 
+	public StudyModel(String title, String day, String content, int time, int level, boolean status) {
+		this.title = title;
+		this.day = day;
+		this.content = content;
+		this.time = time;
+		this.level = level;
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return
+		//		id + " "
+		//				+ title + " "
+		//				+ day + " "
+		//				+ content + " "
+		//				+ time + "時間" + " "
+		//				+ level + " "
+		//				+ status;
+
+		"ID：" + id
+				+ ", タイトル：" + title
+				+ ", 日付：" + day
+				+ ", 内容：" + content
+				+ ", 学習時間：" + time + "時間"
+				+ ", 理解度：" + level
+				+ ", 復習：" + status;
+	}
+
 }
