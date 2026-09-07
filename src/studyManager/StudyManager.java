@@ -68,6 +68,10 @@ public class StudyManager {
 	}
 
 	public void getStudyById() {
+		for (StudyModel studyModel : studyList) {
+			System.out.print(studyModel.getId() + ":");
+			System.out.println(studyModel.getTitle());
+		}
 	}
 
 	public void updateStudy() {
