@@ -1,11 +1,11 @@
 package model;
 
-public class SutudyModel {
+public class StudyModel {
 	private int id;
 	private String title;
 	private String day;
 	private String content;
-	private int time;
+	private double time;
 	private int level;
 	private boolean status;
 
@@ -41,11 +41,11 @@ public class SutudyModel {
 		this.content = content;
 	}
 
-	public int getTime() {
+	public double getTime() {
 		return time;
 	}
 
-	public void setTime(int time) {
+	public void setTime(double time) {
 		this.time = time;
 	}
 
@@ -65,10 +65,10 @@ public class SutudyModel {
 		this.status = status;
 	}
 
-	public SutudyModel() {
+	public StudyModel() {
 	}
 
-	public SutudyModel(int id, String title, String day, String content, int time, int level, boolean status) {
+	public StudyModel(int id, String title, String day, String content, Double time, int level, boolean status) {
 		this.id = id;
 		this.title = title;
 		this.day = day;
@@ -76,6 +76,35 @@ public class SutudyModel {
 		this.time = time;
 		this.level = level;
 		this.status = status;
+	}
+
+	public StudyModel(String title, String day, String content, Double time, int level, boolean status) {
+		this.title = title;
+		this.day = day;
+		this.content = content;
+		this.time = time;
+		this.level = level;
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return
+		//		id + " "
+		//				+ title + " "
+		//				+ day + " "
+		//				+ content + " "
+		//				+ time + "時間" + " "
+		//				+ level + " "
+		//				+ status;
+
+		"ID：" + id
+				+ ", タイトル：" + title
+				+ ", 日付：" + day
+				+ ", 内容：" + content
+				+ ", 学習時間：" + time + "時間"
+				+ ", 理解度：" + level
+				+ ", 復習：" + status;
 	}
 
 }
