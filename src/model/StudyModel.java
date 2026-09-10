@@ -5,7 +5,7 @@ public class StudyModel {
 	private String title;
 	private String day;
 	private String content;
-	private int time;
+	private double time;
 	private int level;
 	private boolean status;
 
@@ -41,11 +41,11 @@ public class StudyModel {
 		this.content = content;
 	}
 
-	public int getTime() {
+	public double getTime() {
 		return time;
 	}
 
-	public void setTime(int time) {
+	public void setTime(double time) {
 		this.time = time;
 	}
 
@@ -68,7 +68,7 @@ public class StudyModel {
 	public StudyModel() {
 	}
 
-	public StudyModel(int id, String title, String day, String content, int time, int level, boolean status) {
+	public StudyModel(int id, String title, String day, String content, Double time, int level, boolean status) {
 		this.id = id;
 		this.title = title;
 		this.day = day;
@@ -78,7 +78,7 @@ public class StudyModel {
 		this.status = status;
 	}
 
-	public StudyModel(String title, String day, String content, int time, int level, boolean status) {
+	public StudyModel(String title, String day, String content, Double time, int level, boolean status) {
 		this.title = title;
 		this.day = day;
 		this.content = content;
