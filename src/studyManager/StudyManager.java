@@ -33,7 +33,7 @@ public class StudyManager {
 
 				System.out.print("復習済み？（y / n）：");
 				String sta = scanner.nextLine();
-				Boolean status = sta.equals("y");
+				boolean status = sta.equals("y");
 
 				StudyModel study = new StudyModel(
 						title,
@@ -103,7 +103,7 @@ public class StudyManager {
 
 						} else if (command == 3) {
 							System.out.print("内容変更：");
-							studyModel.setContent(null);
+							studyModel.setContent(scanner.next());
 							System.out.println("更新完了");
 							continue;
 
@@ -124,7 +124,7 @@ public class StudyManager {
 							System.out.print("");
 							System.out.print("復習済み？（y / n）：");
 							String sta = scanner.nextLine();
-							Boolean status = sta.equals("y");
+							boolean status = sta.equals("y");
 							studyModel.setStatus(status);
 							System.out.println("更新完了");
 							continue;
