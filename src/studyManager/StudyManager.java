@@ -25,7 +25,7 @@ public class StudyManager {
 				String content = scanner.nextLine();
 
 				System.out.print("学習時間：");
-				Double time = scanner.nextDouble();
+				double time = scanner.nextDouble();
 
 				System.out.print("理解度：");
 				int level = scanner.nextInt();
@@ -164,7 +164,7 @@ public class StudyManager {
 	}
 
 	public void calcTotalTime() {
-		int sumtime = 0;
+		double sumtime = 0;
 		for (StudyModel studyModel : studyList) {
 			sumtime += studyModel.getTime();
 		}
