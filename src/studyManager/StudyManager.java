@@ -25,7 +25,7 @@ public class StudyManager {
 				String content = scanner.nextLine();
 
 				System.out.print("学習時間：");
-				Double time = scanner.nextDouble();
+				double time = scanner.nextDouble();
 
 				System.out.print("理解度：");
 				int level = scanner.nextInt();
@@ -63,7 +63,7 @@ public class StudyManager {
 	}
 
 	public void getAllStudies() {
-		System.out.println("|  ID  |  タイトル  |  日付  |  内容  |  学習時間  |  理解度  |  復習  |");
+		System.out.println();
 		for (StudyModel studyModel : studyList) {
 			System.out.println(studyModel);
 		}
@@ -139,6 +139,9 @@ public class StudyManager {
 						scanner.nextLine();
 					}
 				}
+			} else {
+				System.out.println("存在しないIDです");
+				System.out.println("");
 			}
 		}
 	}
@@ -147,8 +150,13 @@ public class StudyManager {
 		getStudyById();
 		System.out.print("削除するIDを入力：");
 		int id = scanner.nextInt();
-		studyList.removeIf(model -> model.getId() == id);
-		System.out.println("削除完了");
+		boolean deleteck = studyList.removeIf(model -> model.getId() == id);
+		if (deleteck) {
+			System.out.println("削除完了");
+
+		} else {
+			System.out.println("存在しないIDです");
+		}
 		System.out.println("");
 	}
 
@@ -164,7 +172,7 @@ public class StudyManager {
 	}
 
 	public void calcTotalTime() {
-		int sumtime = 0;
+		double sumtime = 0;
 		for (StudyModel studyModel : studyList) {
 			sumtime += studyModel.getTime();
 		}
